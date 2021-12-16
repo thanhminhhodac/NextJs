@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "alpha-value-notation": null,
+    "at-rule-no-unknown": null,
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "color-function-notation": "legacy",
+    "declaration-block-no-redundant-longhand-properties": null,
+    "font-family-name-quotes": "always-where-required",
+    "prettier/prettier": true,
+    "shorthand-property-no-redundant-values": true
+  }
+}
