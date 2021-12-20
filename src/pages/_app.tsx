@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app';
 import Head from 'components/common/Head';
 import Layout from 'components/common/Layout';
 // style
+import 'antd/dist/antd.css';
 import 'styles/globals.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (

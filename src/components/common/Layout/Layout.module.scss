@@ -1,0 +1,8 @@
+@use "styles/variables.module.scss" as v;
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 80px auto 80px;
+  background-color: v.$black;
+  color: v.$primary-text;
+}

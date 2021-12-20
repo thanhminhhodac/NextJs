@@ -1,0 +1,67 @@
+@use "styles/variables.module.scss" as v;
+
+@mixin button-effect($primary, $secondary) {
+  background-color: $primary;
+  border: 2px solid $secondary;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $primary;
+    background: $secondary;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    border: 2px solid $primary;
+    background: darken($primary, 0.2);
+  }
+
+  &::selection {
+    background: transparent;
+  }
+}
+
+@mixin button-text-color($primary, $secondary) {
+  color: $primary;
+
+  &:hover,
+  &:active,
+  &::selection,
+  &:focus {
+    color: $secondary;
+  }
+}
+
+@mixin button-text-primary {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* border type */
+@mixin button-border-rectangle {
+  border-radius: 3px;
+}
+
+@mixin button-border-oval {
+  border-radius: 50px;
+}
+
+@mixin button-border-circle {
+  border-radius: 50%;
+}
+
+/* button type */
+@mixin button-type-outline($primary, $textColor) {
+  @include button-text-color($primary, $textColor);
+  @include button-effect(transparent, $primary);
+}
+
+@mixin button-type-container($primary, $textColor) {
+  @include button-effect($primary, transparent);
+  @include button-text-color($textColor, $primary);
+}
+
+@mixin button-type-toggle($primary, $textColor) {
+  @include button-effect($primary, transparent);
+  @include button-text-color($textColor, $primary);
+}

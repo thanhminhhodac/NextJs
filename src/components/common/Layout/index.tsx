@@ -3,15 +3,15 @@ import React, { FC } from 'react';
 // components
 import Header from 'components/common/Header';
 import Footer from 'components/common/Footer';
+// styles
+import styles from './Layout.module.scss';
 
 const Layout: FC = ({ children }) => (
-  <>
+  <div className={styles.wrapper}>
     <Header />
-    <div className="main-wrapper">
-      <div className="main-wrapper-inner">{children}</div>
-    </div>
+    {children}
     <Footer />
-  </>
+  </div>
 );
 
 export default Layout;
