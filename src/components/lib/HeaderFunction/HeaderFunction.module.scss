@@ -1,0 +1,34 @@
+@use "styles/variables.module.scss" as v;
+@use "styles/button.module.scss" as btn;
+
+.wrapper {
+  align-items: end;
+
+  &Inner {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-column-gap: 12px;
+    align-items: center;
+    justify-items: end;
+
+    .contactButton {
+      @include btn.button-type-outline(v.$pink, v.$white);
+      @include btn.button-text-primary;
+      @include btn.button-border-oval;
+
+      height: 40px;
+      max-width: 160px;
+      width: 90%;
+      text-transform: uppercase;
+    }
+
+    .contextButton {
+      @include btn.button-type-toggle(v.$pink, v.$white);
+      @include btn.button-border-circle;
+
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
