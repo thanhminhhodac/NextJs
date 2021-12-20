@@ -10,6 +10,7 @@
     "declaration-block-no-redundant-longhand-properties": null,
     "font-family-name-quotes": "always-where-required",
     "prettier/prettier": true,
-    "shorthand-property-no-redundant-values": true
+    "shorthand-property-no-redundant-values": true,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$"
   }
 }

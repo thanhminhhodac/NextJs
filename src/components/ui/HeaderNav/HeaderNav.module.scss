@@ -1,0 +1,30 @@
+@use "styles/variables.module.scss" as v;
+
+@mixin navigation {
+  align-self: center;
+  justify-self: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.wrapper {
+  padding: 0 20px;
+
+  &Inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: 1fr;
+    grid-column-gap: 12px;
+    height: 100%;
+
+    .navigationItem {
+      @include navigation;
+
+      color: v.$white;
+
+      &.active {
+        color: v.$pink;
+      }
+    }
+  }
+}
