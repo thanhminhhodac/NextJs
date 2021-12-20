@@ -1,0 +1,11 @@
+@use "styles/variables.module.scss" as v;
+
+.wrapper {
+  padding: 10px 24px;
+
+  &Inner {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
