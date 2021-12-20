@@ -1,9 +1,9 @@
 // libs
 import React from 'react';
 // components
-import HeaderLogo from 'components/ui/HeaderLogo';
-import HeaderNav from 'components/ui/HeaderNav';
-import HeaderFunction from 'components/lib/HeaderFunction';
+import HeaderLogo from './mains/HeaderLogo';
+import HeaderNav from './mains/HeaderNav';
+import HeaderFunction from './mains/HeaderFunction';
 // style
 import styles from './Header.module.scss';
 
