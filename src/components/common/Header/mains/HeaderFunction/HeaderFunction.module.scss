@@ -3,6 +3,9 @@
 
 .wrapper {
   align-items: end;
+  $primary-color: var(--primary-theme-color);
+  $text-color: var(--primary-text-color);
+  $toggle-color: var(--primary-toggle-color);
 
   &Inner {
     height: 100%;
@@ -13,7 +16,7 @@
     justify-items: end;
 
     .contactButton {
-      @include btn.button-type-outline(v.$pink, v.$white);
+      @include btn.button-type-outline($primary-color, $toggle-color);
       @include btn.button-text-primary;
       @include btn.button-border-oval;
 
@@ -24,7 +27,7 @@
     }
 
     .contextButton {
-      @include btn.button-type-toggle(v.$pink, v.$white);
+      @include btn.button-type-toggle($primary-color, $toggle-color);
       @include btn.button-border-circle;
 
       height: 40px;

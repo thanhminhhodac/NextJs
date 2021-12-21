@@ -17,13 +17,13 @@
       width: 40px;
       height: 40px;
       border-radius: 3px;
-      background-color: v.$pink;
-      color: v.$white;
       font-weight: 700;
+      background-color: var(--primary-theme-color);
+      color: v.$white;
     }
 
     .label {
-      color: v.$white;
+      color: var(--primary-text-color);
     }
   }
 }

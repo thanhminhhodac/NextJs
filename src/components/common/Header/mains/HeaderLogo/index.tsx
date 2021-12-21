@@ -9,7 +9,7 @@ const HeaderLogo = () => (
     <Link href="/" passHref>
       <a className={styles.wrapperInner}>
         <div className={styles.box}> TM </div>
-        <h3 className={styles.label}> Portfolio</h3>
+        <h1 className={styles.label}> Portfolio</h1>
       </a>
     </Link>
   </div>

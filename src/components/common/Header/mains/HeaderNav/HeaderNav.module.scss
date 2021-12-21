@@ -1,12 +1,5 @@
 @use "styles/variables.module.scss" as v;
 
-@mixin navigation {
-  align-self: center;
-  justify-self: center;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
 .wrapper {
   padding: 0 20px;
 
@@ -18,12 +11,14 @@
     height: 100%;
 
     .navigationItem {
-      @include navigation;
-
-      color: v.$white;
+      align-self: center;
+      justify-self: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--primary-text-color);
 
       &.active {
-        color: v.$pink;
+        color: var(--primary-theme-color);
       }
     }
   }
