@@ -1,0 +1,11 @@
+.wrapper {
+  height: 100vh;
+
+  &Inner {
+    height: inherit;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text" "pic";
+  }
+}

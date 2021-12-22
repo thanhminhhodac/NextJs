@@ -1,0 +1,47 @@
+@use "styles/variables.module.scss" as v;
+
+.wrapper {
+  grid-area: text;
+  height: inherit;
+
+  &Inner {
+    height: inherit;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .title {
+      padding: 1rem 1rem 1.5rem;
+      border-radius: 3px;
+      background-color: var(--primary-theme-color);
+      font-size: 7rem;
+      font-weight: 700;
+      line-height: 5rem;
+      color: v.$white;
+    }
+
+    .description {
+      color: var(--primary-theme-color);
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .content {
+      color: var(--primary-text-color);
+      font-size: 2rem;
+    }
+
+    .blinkingCursor::after {
+      content: "|";
+      color: inherit;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  }
+}
