@@ -1,9 +1,14 @@
+// libs
 import React from 'react';
+// components
+import Hero from 'components/lib/Hero';
+// style
+import styles from 'styles/pages/Home.module.scss';
 
 const Home = () => (
-  <div className="Home-wrapper">
-    <div className="home-wrapper">
-      <h1> Welcome to Next JS project of Thanh Minh </h1>{' '}
+  <div className={styles.wrapper}>
+    <div className={styles.wrapperInner}>
+      <Hero />
     </div>
   </div>
 );
