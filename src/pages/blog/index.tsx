@@ -11,7 +11,7 @@ import styles from 'styles/pages/Blog.module.scss';
 
 export const getStaticProps: GetStaticProps = async () => {
   const postRes = await axios.get('http://localhost:1337/api/posts');
-  const postData: [blogPost] = postRes.data.data;
+  const postData: blogPost[] | null = postRes.data.data;
 
   if (!postData) {
     return {

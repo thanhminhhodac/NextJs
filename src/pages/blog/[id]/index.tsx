@@ -16,17 +16,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const postRes = await axios.get(`http://localhost:1337/api/posts`);
   const postData: blogPost[] = postRes.data.data;
 
-  const paths = postData.map(post => ({ params: { id: post.id.toString() } }));
+  const paths = postData.map(post => ({
+    params: { id: post.id.toString() },
+  }));
   return {
     paths,
     fallback: false,
   };
 };
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postId = params?.id;
   const postRes = await axios.get(`http://localhost:1337/api/posts/${postId}`);
-  const postData: [blogPost] = postRes.data.data;
+  const postData: blogPost[] | null = postRes.data.data;
 
   if (!postData) {
     return {
